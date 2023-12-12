@@ -32,4 +32,10 @@ export class TrainsService {
     return this.http.post<ResponseModel>(this.apiEndPoint + CONSTANT.ENDPOINTS.BOOK_TRAIN,obj  )
   }
 
+  getAllTrains() :Observable<ResponseModel> {
+    return this.http.get<ResponseModel>(this.apiEndPoint + CONSTANT.ENDPOINTS.GET_ALL_TRAINS  )
+  }
+  getAllBookings(id:number) :Observable<ResponseModel> {
+    return this.http.get<ResponseModel>(this.apiEndPoint + CONSTANT.ENDPOINTS.GET_ALL_BOOKING_BY_PASSENGER + '?passengerid='+ id )
+  }
 }

@@ -9,6 +9,7 @@ import { BookingsComponent } from './pages/bookings/bookings.component';
 import { AdminComponent } from './pages/admin/admin.component';  
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { TrainsComponent } from './pages/trains/trains.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SearchComponent,
     BookingsComponent,
-    AdminComponent 
+    AdminComponent,
+    TrainsComponent 
   ],
   imports: [
     BrowserModule,

@@ -16,10 +16,10 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
 
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white  me-1" href="#">Home</a>
+                        <a class="nav-link fw-semibold text-white  me-1" routerLink="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white  me-1" href="#">Trains</a>
+                        <a class="nav-link fw-semibold text-white  me-1" routerLink="/trains">Trains</a>
                     </li>
                     <!-- cart -->
                     <li class="nav-item" *ngIf="!loggedUserData">
@@ -27,6 +27,9 @@
                     </li>
                     <li class="nav-item" *ngIf="!loggedUserData">
                         <a (click)="openRegister()" class="nav-link fw-semibold  text-white  me-1"  >Register</a>
+                    </li> 
+                    <li class="nav-item" *ngIf="loggedUserData">
+                        <a   class="nav-link fw-semibold  text-white  me-1"  routerLink="/bookings">My Bookings</a>
                     </li> 
                     <li class="nav-item" *ngIf="loggedUserData">
                         <a   class="nav-link fw-semibold  text-white  me-1"  >{{loggedUserData.phone}}</a>
